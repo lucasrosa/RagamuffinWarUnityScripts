@@ -1,11 +1,13 @@
 ﻿#pragma strict
 
-public class PauseButton extends GameButton {
+public class ResumeButton extends GameButton {
 	private var instance : GameManager;
 	public var menu : GameObject;
-		
+	public var pauseButton : GameObject;
+			
 	function buttonPressed () {
 		invertPause();
+		guiTexture.color = Color.gray;
 	}
 
 	function invertPause() {
@@ -15,9 +17,9 @@ public class PauseButton extends GameButton {
 		} else {
 			if (instance.isPaused) {
 				unpauseGame();
-			} else {
-				pauseGame();
-			}
+			}// else {
+			//	pauseGame();
+			//}
 		}
 	}
 
@@ -40,6 +42,8 @@ public class PauseButton extends GameButton {
 	    	Debug.Log("There is no GameManager instance");
 		} else {
 			instance.isPaused = false;
+			menu.SetActive(false);
+			pauseButton.SetActive(true);
 			Debug.Log("Game unpaused.");
 		}
 	}
