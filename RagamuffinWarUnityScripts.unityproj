@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1397B689-F7C5-4BF2-8EC4-887FC915AB9E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>RagamuffinWarUnityScripts</RootNamespace>
+    <UsePartialTypes>False</UsePartialTypes>
+    <AssemblyName>RagamuffinWarUnityScripts</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants />
+    <ErrorReport>prompt</ErrorReport>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants />
+    <ErrorReport>prompt</ErrorReport>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SoldierUnities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SoldierUnities\Unities.js" />
+    <Compile Include="SoldierUnities\UnitCategory.js" />
+  </ItemGroup>
+</Project>
